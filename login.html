@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to your RENTME account.">
+    <meta name="theme-color" content="#1A428A">
+    <title>Login | RENTME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html#home" aria-label="RENTME home">
+                <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M5.5 22.2 24 7l18.5 15.2M11 20v20h26V20M20 40V27h8v13" />
+                </svg>
+                <span class="brand-wordmark">
+                    <strong>RENTME</strong>
+                    <small>Your Budget, Your Place.</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <main class="login-page" id="main-content" tabindex="-1">
+        <section class="login-card" aria-labelledby="login-title">
+            <a class="login-house" href="index.html#home" aria-label="RENTME home">
+                <svg viewBox="0 0 64 56" aria-hidden="true">
+                    <path d="M5 26 32 5l27 21M12 23v28h40V23M25 51V34h14v17M23 23h6v6h-6zM35 23h6v6h-6z" />
+                </svg>
+            </a>
+            <h1 id="login-title">Welcome Back!</h1>
+            <p class="login-subtitle" id="login-subtitle">Log in to your RENTME account</p>
+            <p class="login-demo-note">Demo only: this page does not authenticate users or save accounts. Valid form submissions return to Home.</p>
+
+            <div class="account-type-select" role="group" aria-label="Account type">
+                <button class="auth-tab is-active" id="student-account" type="button" aria-pressed="true">Student</button>
+                <button class="auth-tab" id="landlord-account" type="button" aria-pressed="false">Homeowner / Landlord</button>
+            </div>
+
+            <div class="auth-tabs" role="tablist" aria-label="Account access">
+                <button class="auth-tab is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-form">Log In</button>
+                <button class="auth-tab" id="register-tab" type="button" role="tab" aria-selected="false" aria-controls="register-form">Register</button>
+            </div>
+
+            <form class="login-form" id="login-form" action="index.html" method="get" role="tabpanel" aria-labelledby="login-tab">
+                <label class="login-field">
+                    Email Address
+                    <input type="email" autocomplete="username" placeholder="you@example.com" required>
+                </label>
+                <label class="login-field">
+                    Password
+                    <input type="password" autocomplete="current-password" placeholder="Enter your password" required>
+                </label>
+                <div class="login-options">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="mailto:rentme.info@gmail.com?subject=Password%20reset%20assistance">Forgot Password?</a>
+                </div>
+                <button class="login-submit" id="login-submit-button" type="submit">Log In</button>
+            </form>
+
+            <form class="login-form" id="register-form" action="index.html" method="get" role="tabpanel" aria-labelledby="register-tab" hidden>
+                <label class="login-field">
+                    Full Name
+                    <input type="text" autocomplete="name" placeholder="Your full name" required>
+                </label>
+                <label class="login-field">
+                    Email Address
+                    <input type="email" autocomplete="email" placeholder="you@example.com" required>
+                </label>
+                <label class="login-field">
+                    Password
+                    <input id="register-password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+                </label>
+                <label class="login-field">
+                    Confirm Password
+                    <input id="register-confirm-password" type="password" autocomplete="new-password" minlength="8" placeholder="Re-enter your password" required>
+                </label>
+                <button class="login-submit" id="register-submit-button" type="submit">Register</button>
+            </form>
+
+            <p class="login-help">Need help? <a href="index.html#contact">Contact us</a>.</p>
+        </section>
+    </main>
+
+    <footer class="lodging-footer">
+        <div class="section-container">
+            <span>© 2026 RENTME. All rights reserved.</span>
+            <a href="index.html#home">Find. Stay. Learn.</a>
+        </div>
+    </footer>
+
+    <script>
+        const loginTitle = document.querySelector("#login-title");
+        const loginSubtitle = document.querySelector("#login-subtitle");
+        const loginTab = document.querySelector("#login-tab");
+        const registerTab = document.querySelector("#register-tab");
+        const studentAccount = document.querySelector("#student-account");
+        const landlordAccount = document.querySelector("#landlord-account");
+        const loginSubmitButton = document.querySelector("#login-submit-button");
+        const registerSubmitButton = document.querySelector("#register-submit-button");
+        const loginForm = document.querySelector("#login-form");
+        const registerForm = document.querySelector("#register-form");
+        let accountType = new URLSearchParams(window.location.search).get("account") === "landlord" ? "landlord" : "student";
+        let authMode = "login";
+
+        function updateAuthCopy() {
+            const isLandlord = accountType === "landlord";
+            const isLogin = authMode === "login";
+            loginTitle.textContent = isLogin
+                ? (isLandlord ? "Homeowner / Landlord Log In" : "Welcome Back!")
+                : (isLandlord ? "Register as a Homeowner / Landlord" : "Create Your Account");
+            loginSubtitle.textContent = isLogin
+                ? (isLandlord ? "Log in to continue as a property owner." : "Log in to your RENTME account")
+                : (isLandlord ? "Join RENTME as a homeowner or landlord." : "Join RENTME and find your perfect stay");
+            loginSubmitButton.textContent = isLandlord ? "Log In as Owner" : "Log In";
+            registerSubmitButton.textContent = isLandlord ? "Register as Owner" : "Register";
+        }
+
+        function setAccountType(type) {
+            accountType = type;
+            const isLandlord = type === "landlord";
+            studentAccount.classList.toggle("is-active", !isLandlord);
+            landlordAccount.classList.toggle("is-active", isLandlord);
+            studentAccount.setAttribute("aria-pressed", String(!isLandlord));
+            landlordAccount.setAttribute("aria-pressed", String(isLandlord));
+            updateAuthCopy();
+        }
+
+        function setAuthMode(mode) {
+            const isLogin = mode === "login";
+            authMode = mode;
+            loginForm.hidden = !isLogin;
+            registerForm.hidden = isLogin;
+            loginTab.classList.toggle("is-active", isLogin);
+            registerTab.classList.toggle("is-active", !isLogin);
+            loginTab.setAttribute("aria-selected", String(isLogin));
+            registerTab.setAttribute("aria-selected", String(!isLogin));
+            updateAuthCopy();
+        }
+
+        function returnHomeAfterSubmit(form) {
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                if (form.reportValidity()) window.location.href = "index.html";
+            });
+        }
+
+        loginTab.addEventListener("click", () => setAuthMode("login"));
+        registerTab.addEventListener("click", () => setAuthMode("register"));
+        studentAccount.addEventListener("click", () => setAccountType("student"));
+        landlordAccount.addEventListener("click", () => setAccountType("landlord"));
+        setAccountType(accountType);
+        returnHomeAfterSubmit(loginForm);
+
+        registerForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const password = document.querySelector("#register-password");
+            const confirmation = document.querySelector("#register-confirm-password");
+            confirmation.setCustomValidity(password.value === confirmation.value ? "" : "Passwords must match.");
+            if (registerForm.reportValidity()) window.location.href = "index.html";
+        });
+
+        document.querySelector("#register-confirm-password").addEventListener("input", (event) => {
+            event.currentTarget.setCustomValidity("");
+        });
+    </script>
+</body>
+</html>

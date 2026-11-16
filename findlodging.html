@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search affordable student rooms, dormitories, and apartments near your school with RENTME.">
+    <meta name="theme-color" content="#1A428A">
+    <title>Find Lodging | RENTME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html#home" aria-label="RENTME home">
+                <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M5.5 22.2 24 7l18.5 15.2M11 20v20h26V20M20 40V27h8v13" />
+                </svg>
+                <span class="brand-wordmark">
+                    <strong>RENTME</strong>
+                    <small>Your Budget, Your Place.</small>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html#home">Home</a>
+                <a class="nav-link is-current" href="findlodging.html" aria-current="page">Find Lodging</a>
+                <a class="nav-link" href="index.html#about">About Us</a>
+                <a class="nav-link" href="index.html#tips">Tips for Students</a>
+                <a class="nav-link" href="index.html#contact">Contact Us</a>
+                <a class="nav-link" href="index.html#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="lodging-page" aria-labelledby="lodging-title">
+            <div class="section-container">
+                <header class="lodging-heading">
+                    <p class="eyebrow">A place that fits your student life</p>
+                    <h1 id="lodging-title">Find Your Perfect Stay</h1>
+                    <p>Search affordable rooms close to school and the things you need every day.</p>
+                </header>
+
+                <form class="lodging-search" id="lodging-search">
+                    <label class="search-field">
+                        <span>Location</span>
+                        <select name="location" aria-label="Choose a location">
+                            <option value="">All locations</option>
+                            <option value="mandaue city">Mandaue City</option>
+                            <option value="maguikay">Maguikay</option>
+                            <option value="near uclm">Near UCLM</option>
+                        </select>
+                    </label>
+                    <label class="search-field">
+                        <span>Check-in</span>
+                        <input type="date" name="checkin" aria-label="Check-in date">
+                    </label>
+                    <label class="search-field">
+                        <span>Check-out</span>
+                        <input type="date" name="checkout" aria-label="Check-out date">
+                    </label>
+                    <button class="button button-primary search-submit" type="submit">Search</button>
+                </form>
+
+                <div class="lodging-layout">
+                    <aside class="lodging-filters" aria-label="Filter lodging">
+                        <h2>Filters</h2>
+                        <fieldset>
+                            <legend>Price Range</legend>
+                            <label><input type="checkbox" name="price" value="0-3000" form="lodging-search"> ₱1,000 – ₱3,000</label>
+                            <label><input type="checkbox" name="price" value="3001-5000" form="lodging-search"> ₱3,001 – ₱5,000</label>
+                            <label><input type="checkbox" name="price" value="5001-99999" form="lodging-search"> ₱5,001+</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Room Type</legend>
+                            <label><input type="checkbox" name="type" value="single" form="lodging-search"> Single Room</label>
+                            <label><input type="checkbox" name="type" value="shared" form="lodging-search"> Shared Room</label>
+                            <label><input type="checkbox" name="type" value="apartment" form="lodging-search"> Apartment</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Amenities</legend>
+                            <label><input type="checkbox" name="amenity" value="wifi" form="lodging-search"> Wi-Fi</label>
+                            <label><input type="checkbox" name="amenity" value="ac" form="lodging-search"> AC</label>
+                            <label><input type="checkbox" name="amenity" value="laundry" form="lodging-search"> Laundry</label>
+                        </fieldset>
+                        <button class="clear-filters" type="reset" form="lodging-search">Clear filters</button>
+                    </aside>
+
+                    <div class="lodging-results" aria-live="polite">
+                        <p class="results-count" id="results-count">3 places to explore</p>
+                        <article class="lodging-card" data-location="near uclm" data-map-query="Near UCLM, Cebu, Philippines" data-price="2500" data-type="shared" data-amenities="wifi laundry">
+                            <img src="student-dormitory.png" alt="Empty, freshly painted room with a window" loading="lazy">
+                            <div class="lodging-card-copy">
+                                <div class="lodging-card-title">
+                                    <div>
+                                        <h2>Student Dormitory</h2>
+                                        <p class="listing-location"><span aria-hidden="true">⌖</span> Near UCLM</p>
+                                        <p class="listing-rating" aria-label="Rated 4.5 out of 5">★★★★★ <span>(4.5)</span></p>
+                                    </div>
+                                    <p class="listing-price">₱2,500 <span>/mo</span></p>
+                                </div>
+                                <div class="listing-actions">
+                                    <button class="reserve-room-button" type="button">Reserve Room</button>
+                                    <button class="listing-details-button" type="button">View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="lodging-card" data-location="mandaue city" data-map-query="Mandaue City, Cebu, Philippines" data-price="3000" data-type="single" data-amenities="wifi ac">
+                            <img src="cozy-room.jpeg" alt="Bright empty bedroom with an attic ceiling and wood floors" loading="lazy">
+                            <div class="lodging-card-copy">
+                                <div class="lodging-card-title">
+                                    <div>
+                                        <h2>Cozy Room</h2>
+                                        <p class="listing-location"><span aria-hidden="true">⌖</span> Mandaue City</p>
+                                        <p class="listing-rating" aria-label="Rated 4.3 out of 5">★★★★★ <span>(4.3)</span></p>
+                                    </div>
+                                    <p class="listing-price">₱3,000 <span>/mo</span></p>
+                                </div>
+                                <div class="listing-actions">
+                                    <button class="reserve-room-button" type="button">Reserve Room</button>
+                                    <button class="listing-details-button" type="button">View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="lodging-card" data-location="maguikay" data-map-query="Maguikay, Mandaue City, Cebu, Philippines" data-price="3200" data-type="single" data-amenities="wifi laundry">
+                            <img src="affordable-stay.png" alt="Empty room with hardwood floors and large windows" loading="lazy">
+                            <div class="lodging-card-copy">
+                                <div class="lodging-card-title">
+                                    <div>
+                                        <h2>Affordable Stay</h2>
+                                        <p class="listing-location"><span aria-hidden="true">⌖</span> Maguikay</p>
+                                        <p class="listing-rating" aria-label="Rated 4.2 out of 5">★★★★★ <span>(4.2)</span></p>
+                                    </div>
+                                    <p class="listing-price">₱3,200 <span>/mo</span></p>
+                                </div>
+                                <div class="listing-actions">
+                                    <button class="reserve-room-button" type="button">Reserve Room</button>
+                                    <button class="listing-details-button" type="button">View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        <p class="no-results" id="no-results" hidden>No places match those filters. Try changing your search.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="map-dialog" id="location-dialog" aria-labelledby="map-dialog-title">
+        <div class="map-dialog-content">
+            <header class="map-dialog-header">
+                <div>
+                    <p class="eyebrow">Approximate area</p>
+                    <h2 id="map-dialog-title">Listing location</h2>
+                </div>
+                <button class="map-dialog-close" type="button" aria-label="Close map">&times;</button>
+            </header>
+            <p class="map-location-description" id="map-location-description"></p>
+            <iframe id="location-map" title="Map showing the approximate listing area" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <footer class="map-dialog-actions">
+                <a id="open-map-link" href="#" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+                <a id="inquire-link" href="mailto:rentme.info@gmail.com">Ask about this place</a>
+            </footer>
+        </div>
+    </dialog>
+
+    <dialog class="map-dialog reservation-dialog" id="reservation-dialog" aria-labelledby="reservation-dialog-title">
+        <div class="map-dialog-content">
+            <header class="map-dialog-header">
+                <div>
+                    <p class="eyebrow">Reservation request</p>
+                    <h2 id="reservation-dialog-title">Reserve a room</h2>
+                </div>
+                <button class="map-dialog-close" type="button" aria-label="Close reservation form">&times;</button>
+            </header>
+            <p class="reservation-listing" id="reservation-listing"></p>
+            <p class="reservation-disclaimer">Send a request to the RENTME team. Your reservation is not confirmed until the property owner confirms availability.</p>
+            <form class="reservation-form" id="reservation-form">
+                <label class="reservation-field">
+                    Full name
+                    <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label class="reservation-field">
+                    Email address
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <div class="reservation-dates">
+                    <label class="reservation-field">
+                        Check-in
+                        <input type="date" name="checkin" id="reservation-checkin" required>
+                    </label>
+                    <label class="reservation-field">
+                        Check-out
+                        <input type="date" name="checkout" id="reservation-checkout" required>
+                    </label>
+                </div>
+                <button class="reserve-submit" type="submit">Create Reservation Request</button>
+            </form>
+            <p class="reservation-status" id="reservation-status" aria-live="polite"></p>
+            <a class="reservation-email-link" id="reservation-email-link" href="#" hidden>Open your email to send the request</a>
+        </div>
+    </dialog>
+
+    <footer class="lodging-footer">
+        <div class="section-container">
+            <span>© 2026 RENTME. All rights reserved.</span>
+            <a href="index.html#contact">Need help? Contact us</a>
+        </div>
+    </footer>
+
+    <script>
+        const searchForm = document.querySelector("#lodging-search");
+        const cards = [...document.querySelectorAll(".lodging-card")];
+        const resultsCount = document.querySelector("#results-count");
+        const noResults = document.querySelector("#no-results");
+        const locationDialog = document.querySelector("#location-dialog");
+        const mapDialogTitle = document.querySelector("#map-dialog-title");
+        const mapLocationDescription = document.querySelector("#map-location-description");
+        const locationMap = document.querySelector("#location-map");
+        const openMapLink = document.querySelector("#open-map-link");
+        const inquireLink = document.querySelector("#inquire-link");
+        const reservationDialog = document.querySelector("#reservation-dialog");
+        const reservationForm = document.querySelector("#reservation-form");
+        const reservationListing = document.querySelector("#reservation-listing");
+        const reservationCheckin = document.querySelector("#reservation-checkin");
+        const reservationCheckout = document.querySelector("#reservation-checkout");
+        const reservationStatus = document.querySelector("#reservation-status");
+        const reservationEmailLink = document.querySelector("#reservation-email-link");
+
+        function filterLodging() {
+            const formData = new FormData(searchForm);
+            const location = String(formData.get("location") || "").toLowerCase();
+            const prices = formData.getAll("price").map(String);
+            const types = formData.getAll("type").map(String);
+            const amenities = formData.getAll("amenity").map(String);
+            let visibleCount = 0;
+
+            for (const card of cards) {
+                const price = Number(card.dataset.price);
+                const matchesPrice = prices.length === 0 || prices.some((range) => {
+                    const [minimum, maximum] = range.split("-").map(Number);
+                    return price >= minimum && price <= maximum;
+                });
+                const cardAmenities = card.dataset.amenities.split(" ");
+                const matches = (!location || card.dataset.location.includes(location))
+                    && matchesPrice
+                    && (types.length === 0 || types.includes(card.dataset.type))
+                    && amenities.every((amenity) => cardAmenities.includes(amenity));
+
+                card.hidden = !matches;
+                if (matches) visibleCount += 1;
+            }
+
+            resultsCount.textContent = `${visibleCount} ${visibleCount === 1 ? "place" : "places"} to explore`;
+            noResults.hidden = visibleCount > 0;
+        }
+
+        searchForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            filterLodging();
+        });
+        searchForm.addEventListener("change", filterLodging);
+        document.querySelector(".lodging-filters").addEventListener("change", filterLodging);
+        searchForm.addEventListener("reset", () => requestAnimationFrame(filterLodging));
+
+        document.querySelector(".lodging-results").addEventListener("click", (event) => {
+            const button = event.target.closest(".listing-details-button");
+            if (!button) return;
+
+            const card = button.closest(".lodging-card");
+            const listingName = card.querySelector("h2").textContent;
+            const mapQuery = card.dataset.mapQuery;
+            const encodedQuery = encodeURIComponent(mapQuery);
+            const mapSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+
+            mapDialogTitle.textContent = `${listingName} Location`;
+            mapLocationDescription.textContent = mapQuery;
+            locationMap.src = `https://maps.google.com/maps?q=${encodedQuery}&output=embed`;
+            openMapLink.href = mapSearchUrl;
+            inquireLink.href = `mailto:rentme.info@gmail.com?subject=${encodeURIComponent(`${listingName} inquiry`)}`;
+            locationDialog.showModal();
+        });
+
+        document.querySelector(".lodging-results").addEventListener("click", (event) => {
+            const button = event.target.closest(".reserve-room-button");
+            if (!button) return;
+
+            const card = button.closest(".lodging-card");
+            const listingName = card.querySelector("h2").textContent;
+            const price = card.querySelector(".listing-price").textContent.trim();
+            const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+            reservationForm.reset();
+            reservationListing.textContent = `${listingName} — ${price}`;
+            reservationStatus.textContent = "";
+            reservationEmailLink.hidden = true;
+            reservationEmailLink.removeAttribute("href");
+            reservationCheckin.min = today;
+            reservationCheckout.min = today;
+            reservationDialog.showModal();
+        });
+
+        reservationCheckin.addEventListener("change", () => {
+            reservationCheckout.min = reservationCheckin.value || reservationCheckin.min;
+            if (reservationCheckout.value && reservationCheckout.value <= reservationCheckin.value) {
+                reservationCheckout.value = "";
+            }
+        });
+
+        reservationForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            reservationCheckout.setCustomValidity(
+                reservationCheckout.value <= reservationCheckin.value ? "Check-out must be after check-in." : ""
+            );
+            if (!reservationForm.reportValidity()) return;
+
+            const formData = new FormData(reservationForm);
+            const listing = reservationListing.textContent;
+            const subject = `Reservation request: ${listing}`;
+            const body = [
+                `Room: ${listing}`,
+                `Name: ${formData.get("name")}`,
+                `Email: ${formData.get("email")}`,
+                `Check-in: ${formData.get("checkin")}`,
+                `Check-out: ${formData.get("checkout")}`
+            ].join("\n");
+
+            reservationEmailLink.href = `mailto:rentme.info@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            reservationEmailLink.hidden = false;
+            reservationStatus.textContent = "Your request is ready. Open your email to send it to RENTME.";
+            reservationEmailLink.focus();
+        });
+
+        locationDialog.querySelector(".map-dialog-close").addEventListener("click", () => locationDialog.close());
+        locationDialog.addEventListener("click", (event) => {
+            if (event.target === locationDialog) locationDialog.close();
+        });
+        reservationDialog.querySelector(".map-dialog-close").addEventListener("click", () => reservationDialog.close());
+        reservationDialog.addEventListener("click", (event) => {
+            if (event.target === reservationDialog) reservationDialog.close();
+        });
+    </script>
+</body>
+</html>

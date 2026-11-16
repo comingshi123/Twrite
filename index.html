@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find affordable lodging, boarding houses, and rooms near your school with RENTME.">
+    <meta name="theme-color" content="#1A428A">
+    <title>RENTME | Your Budget, Your Place.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#home" aria-label="RENTME — Your Budget, Your Place">
+                <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M5.5 22.2 24 7l18.5 15.2M11 20v20h26V20M20 40V27h8v13" />
+                </svg>
+                <span class="brand-wordmark">
+                    <strong>RENTME</strong>
+                    <small>Your Budget, Your Place.</small>
+                </span>
+            </a>
+            <nav class="primary-nav" aria-label="Main navigation">
+                <a class="nav-link is-current" href="#home" aria-current="page">Home</a>
+                <a class="nav-link" href="findlodging.html">Find Lodging</a>
+                <a class="nav-link" href="#about">About Us</a>
+                <a class="nav-link" href="#tips">Tips for Students</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <!-- Intro and primary lodging search link -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-dot"></span> A better start to student life</p>
+                    <h1 id="hero-title">
+                        FIND YOUR HOME<br>
+                        AWAY FROM HOME!
+                    </h1>
+                    <p class="hero-lead">A place to stay near school shouldn’t stretch your budget.</p>
+                    <p>RENTME helps students discover affordable rooms, boarding houses, and lodging close to campus. Compare your options, find a place that fits your needs, and feel more at home while you study.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="findlodging.html">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="10.8" cy="10.8" r="6.4" />
+                                <path d="m15.5 15.5 4.2 4.2" />
+                            </svg>
+                            Find Your Lodging
+                        </a>
+                        <a class="button button-outline" href="#about">Learn More About Us</a>
+                    </div>
+                    <div class="hero-trust"><span class="trust-check" aria-hidden="true">✓</span> Student-focused. Budget-conscious. Close to campus.</div>
+                </div>
+                <div class="hero-visual">
+                    <img
+                        src="homepage-room.webp"
+                        alt="Bright bedroom with a bed, window, and natural light"
+                        fetchpriority="high"
+                    >
+                    <div class="photo-caption">
+                        <span class="caption-icon" aria-hidden="true">⌂</span>
+                        <span>
+                            <strong>Your next chapter starts here</strong>
+                            <small>Find a place that feels right.</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RENTME features and benefits -->
+        <section class="features section-band" id="find-lodging" aria-labelledby="features-title">
+            <div class="section-container">
+                <header class="section-heading">
+                    <p class="eyebrow">A simpler way to settle in</p>
+                    <h2 id="features-title">HOW RENTME HELPS YOU</h2>
+                    <p>Everything you need to make your student housing search feel easier.</p>
+                </header>
+                <div class="feature-grid">
+                    <article class="feature-item">
+                        <span class="feature-icon icon-green" aria-hidden="true">
+                            <svg viewBox="0 0 48 48">
+                                <rect x="7" y="13" width="34" height="25" rx="5" />
+                                <path d="M7 20h34M14 13v-3h19v3M29 28h7" />
+                                <circle cx="25" cy="28" r="2" />
+                            </svg>
+                        </span>
+                        <h3>Affordable Options</h3>
+                        <p>Explore places that work with your budget and student life.</p>
+                    </article>
+                    <article class="feature-item">
+                        <span class="feature-icon icon-blue" aria-hidden="true">
+                            <svg viewBox="0 0 48 48">
+                                <path d="M38 20c0 10-14 22-14 22S10 30 10 20a14 14 0 1 1 28 0Z" />
+                                <circle cx="24" cy="20" r="4.5" />
+                            </svg>
+                        </span>
+                        <h3>Near Your School</h3>
+                        <p>Find convenient places close to campus and daily essentials.</p>
+                    </article>
+                    <article class="feature-item">
+                        <span class="feature-icon icon-purple" aria-hidden="true">
+                            <svg viewBox="0 0 48 48">
+                                <circle cx="21" cy="21" r="13" />
+                                <path d="m31 31 10 10M16 21h10M21 16v10" />
+                            </svg>
+                        </span>
+                        <h3>Easy Searching</h3>
+                        <p>Browse lodging choices in one place and narrow your search.</p>
+                    </article>
+                    <article class="feature-item">
+                        <span class="feature-icon icon-orange" aria-hidden="true">
+                            <svg viewBox="0 0 48 48">
+                                <path d="m5 17 19-9 19 9-19 9-19-9Z" />
+                                <path d="M13 21v10c6 6 16 6 22 0V21M43 18v13" />
+                                <circle cx="43" cy="34" r="2" />
+                            </svg>
+                        </span>
+                        <h3>Student-Friendly</h3>
+                        <p>Helpful guidance designed around the needs of students.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Student lodging checklist -->
+        <section class="tips-section" id="tips" aria-labelledby="tips-title">
+            <div class="section-container tips-layout">
+                <div class="tips-intro">
+                    <div class="notebook-art" aria-hidden="true">
+                        <svg viewBox="0 0 210 220">
+                            <path class="notebook-shadow" d="m35 36 123-18 25 153-123 20z" />
+                            <path class="notebook-paper" d="m27 30 123-18 25 153-123 20z" />
+                            <path class="notebook-border" d="m27 30 123-18 25 153-123 20z" />
+                            <path class="notebook-lines" d="m43 63 84-12M47 89l85-13M51 115l74-11M55 141l59-9" />
+                            <text x="88" y="77" text-anchor="middle">Good Tips</text>
+                            <text x="91" y="103" text-anchor="middle">for Students</text>
+                            <path class="doodle" d="M25 168c-8 9-10 18-5 24m150-10 17 8-8 17m-156-156L12 42M157 22l13-10" />
+                            <path class="doodle-fill" d="m178 68 4 9 10 1-7 7 2 10-9-5-8 5 2-10-7-7 10-1z" />
+                        </svg>
+                    </div>
+                    <p class="eyebrow">A little planning goes a long way</p>
+                    <h2 id="tips-title">TIPS FOR FINDING<br>THE RIGHT LODGING</h2>
+                    <p>Use this quick checklist to make a confident choice.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number step-blue">1</span>
+                        <h3>Set Your Budget</h3>
+                        <p>Plan a monthly amount that leaves room for food, transport, and school expenses.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number step-green">2</span>
+                        <h3>Choose a Convenient Location</h3>
+                        <p>Look near your school to save time and keep transportation costs down.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number step-purple">3</span>
+                        <h3>Check the Facilities</h3>
+                        <p>Ask about utilities, internet, safety, and which amenities are included.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number step-orange">4</span>
+                        <h3>Visit Before Renting</h3>
+                        <p>Inspect the room and review the rental terms before sending any payment.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About RENTME -->
+        <section class="about-section section-band" id="about" aria-labelledby="about-title">
+            <div class="section-container about-layout">
+                <a class="about-brand" href="#home" aria-label="RENTME home">
+                    <svg class="about-house" viewBox="0 0 100 82" aria-hidden="true">
+                        <path d="m8 39 42-32 42 32M19 32v42h62V32M40 74V49h20v25M67 17h12v10" />
+                    </svg>
+                    <strong>RENTME</strong>
+                    <span>Your Budget, Your Place.</span>
+                </a>
+                <div class="about-copy">
+                    <p class="eyebrow">A place to feel at home</p>
+                    <h2 id="about-title">ABOUT RENTME</h2>
+                    <p>RENTME is a student-focused service that makes finding a safe, comfortable place to stay near school less stressful. We bring affordable lodging, boarding houses, and rooms into one easy starting point.</p>
+                    <p>We believe every student deserves a place where they can rest, study, and feel welcome—without losing sight of their budget.</p>
+                </div>
+                <div class="purpose-cards">
+                    <article class="purpose-card">
+                        <span class="purpose-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32">
+                                <circle cx="14" cy="14" r="9" />
+                                <circle cx="14" cy="14" r="4" />
+                                <path d="m21 21 7 7" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Our Mission</h3>
+                            <p>To help students find affordable lodging that fits their needs.</p>
+                        </div>
+                    </article>
+                    <article class="purpose-card">
+                        <span class="purpose-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32">
+                                <circle cx="14" cy="14" r="9" />
+                                <circle cx="14" cy="14" r="4" />
+                                <path d="m21 21 7 7" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Our Vision</h3>
+                            <p>To become a trusted platform for the student housing search.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="section-container footer-content">
+            <section class="contact-block" aria-labelledby="contact-title">
+                <h2 id="contact-title">CONTACT US</h2>
+                <p class="footer-intro">We are here to help with your student lodging questions.</p>
+                <a class="contact-line" href="mailto:rentme.info@gmail.com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m4 7 8 6 8-6" />
+                    </svg>
+                    <span>rentme.info@gmail.com</span>
+                </a>
+                <p class="contact-line">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 18v-1a7 7 0 0 1 14 0v1M8 11V8a4 4 0 0 1 8 0v3M5 17h3v4H6a2 2 0 0 1-2-2v-1a1 1 0 0 1 1-1Zm14 0h-3v4h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1Z" />
+                    </svg>
+                    <span>Student lodging assistance</span>
+                </p>
+                <p class="contact-line">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                    <span>Near schools and universities</span>
+                </p>
+            </section>
+            <section class="faq-block" id="faq" aria-labelledby="faq-title">
+                <h2 id="faq-title">FAQ</h2>
+                <details>
+                    <summary>How do I choose the right place?</summary>
+                    <p>Compare your budget, location, facilities, and rental terms. Visit the property before making a decision.</p>
+                </details>
+                <details>
+                    <summary>Are prices and availability guaranteed?</summary>
+                    <p>No. Confirm current prices, availability, and property details directly with the owner.</p>
+                </details>
+                <details>
+                    <summary>What should I check before paying?</summary>
+                    <p>Review the rental agreement, included costs, and property conditions, and verify the owner before sending payment.</p>
+                </details>
+            </section>
+            <section class="privacy-block" aria-labelledby="privacy-title">
+                <h2 id="privacy-title">PRIVACY DISCLAIMER</h2>
+                <p>RENTME respects the privacy of its users. Any personal information shared with us should be handled responsibly and used only for its intended purpose. Please verify property details, availability, and rental agreements directly with the owner before making a payment.</p>
+                <p class="terms-note"><strong>Please note:</strong> RENTME helps students discover lodging options. Rental prices, availability, and property conditions are provided by property owners and should be confirmed before you commit.</p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-container">
+                <span>© 2026 RENTME. All rights reserved.</span>
+                <span>Last Updated: October 27, 2026</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
